@@ -147,7 +147,7 @@ const CustomPrevArrow = (props) => {
 };
 
 const Dubaipage = () => {
-    const Navigate = useNavigate();
+    const router = useRouter();
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
