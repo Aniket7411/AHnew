@@ -1,0 +1,66 @@
+.plansmain {
+  min-height: 75vh !important
+}
+
+.highQualText {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 57px;
+}
+
+.bgImage {
+  background-image: url('/images/Rectangle 4804.svg');
+  /* Replace with your image path */
+  background-size: cover;
+  /* Stretches the image to cover the entire width and height */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  background-position: top center;
+  /* Aligns the image to the top center */
+  width: 100%;
+  /* Ensures it spans the full width */
+  height: 80vh;
+  /* position: relative; Allows other elements to be positioned on top */
+}
+
+.michroma-regular {
+  font-family: "Michroma", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silver {
+  background-image: url('/images/silver.svg');
+}
+
+.gold {
+  background-image: url('/images/gold.svg');
+}
+
+.platinum {
+  background-image: url('/images/platinum.svg');
+}
+
+
+@media screen and (max-width: 480px) {
+  .highQualText {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .bgImage {
+    background-image: none;
+  }
+
+}
+
+@media screen and (max-width: 986px) {
+
+  .plansmain {
+    height: max-content;
+  }
+}

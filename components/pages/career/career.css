@@ -1,0 +1,19 @@
+/* .mainHeadCareer{
+    padding-left: 4rem;
+    padding-right: 4rem;
+} */
+
+.ahHub{
+    background: linear-gradient(180deg, #8287BF 0%, #38419A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width: 767px) {
+    .mainHeadCareer{
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+}

@@ -1,0 +1,32 @@
+.contactUsHead {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.bgiContact {
+    background-image: url("/images/Rectangle-4807.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 40vh;
+}
+
+.socialHandlesContact>a>img {
+    height: 40px;
+    width: 40px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .contactForm {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contactUsHead {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+}

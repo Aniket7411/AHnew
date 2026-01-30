@@ -1,0 +1,24 @@
+.slick-dots li button:before {
+  color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #3498db;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+.silver {
+  background-image: url("/images/silver.svg");
+}
+
+.gold {
+  background-image: url("/images/gold.svg");
+}
+
+.platinum {
+  background-image: url("/images/platinum.svg");
+}

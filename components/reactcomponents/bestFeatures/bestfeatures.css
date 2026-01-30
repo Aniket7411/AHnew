@@ -1,0 +1,21 @@
+.highQualText{
+    font-size:48px;
+    font-weight:600;
+    line-height:57px;
+}
+
+.bgiContact {
+    background-image: url('/images/Rectangle 4807.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+@media screen and (max-width: 480px) {
+    .highQualText{
+        font-size:36px;
+        font-weight:600;
+        line-height:40px;
+    }
+
+}

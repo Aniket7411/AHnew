@@ -1,0 +1,23 @@
+.faqsText{
+    font-size:48px;
+    font-weight:600;
+    line-height:57px;
+}
+
+
+@media screen and (max-width: 480px) {
+.faqsText{
+    font-size:36px;
+    font-weight:600;
+    line-height:40px;
+}
+}
+
+@media screen and (max-width: 768px) {
+    .faqMain{
+        padding-left: 22px;
+        padding-right: 22px;
+
+    }
+    }
+

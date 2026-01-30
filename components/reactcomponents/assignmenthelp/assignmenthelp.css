@@ -1,0 +1,58 @@
+/* Outer container for padding and background */
+.outer-container {
+    padding: 1rem;
+     /* min-height: 100vh; */
+  }
+  
+  /* Grid container to manage layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    gap: 1rem; /* Space between the divs */
+  }
+  
+  /* Individual grid items */
+  .grid-item {
+     padding: 1rem;
+     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+.myassignHelp{
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 57px;
+}
+
+.outerCont{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+    .outerCont{
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+    .myassignHelp{
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+   
+  }
+  
+  @media screen and (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column for mobile devices */
+    }
+    .myassignHelp{
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+  

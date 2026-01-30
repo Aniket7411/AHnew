@@ -1,0 +1,28 @@
+li::marker {
+    @apply text-[#F16700]; /* Set marker color to #F16700 using Tailwind's utilities */
+  }
+
+  .bestQualityText{
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 57px;
+  }
+ 
+
+  @media screen and (max-width: 480px) {
+
+  .bestQualityText{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+}
+  }
+
+  @media screen and (max-width: 768px) {
+
+  .bestQualHead{
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+    }
+

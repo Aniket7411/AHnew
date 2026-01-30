@@ -1,0 +1,23 @@
+.contactBg {
+    background-image: url('/images/contactBg.svg'); /* Replace with your image path */
+    /* background-size: 100% 100%; Stretches the image to cover the entire width and height */
+    /* background-repeat: no-repeat; Prevents the image from repeating */
+    /* background-position: top center; Aligns the image to the top center */
+    /* width: 100%; Ensures it spans the full width */
+    /* height: 87vh;  */
+    /* position: relative; Allows other elements to be positioned on top */
+    /* margin-top: 2rem; */
+    /* padding-top: 5rem ; */
+    /* padding-bottom: 5rem ; */
+    /* margin-bottom: 2rem; */
+padding: 0.1rem 4rem 3rem 4rem;
+}
+
+  
+@media screen and (max-width: 768px) {
+    .contactBg{
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    }
+

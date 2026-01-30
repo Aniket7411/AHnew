@@ -1,0 +1,62 @@
+.formsStyle {
+  height: max-content;
+}
+
+.pliagFreeText {
+  /* font-size: 5rem; */
+  font-weight: 700;
+  line-height: 100px;
+  background: linear-gradient(180deg, #8287BF 0%, #38419A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 1rem;
+}
+
+.assignSubForm {
+  width: 100%;
+}
+
+.socialHandles>a>img {
+  height: 40px;
+  width: 40px;
+}
+
+.fraudDiv {
+  /* background-image: url("../../../public/images/fraudsBg.svg"); */
+  background-size: cover;
+
+}
+
+@media screen and (max-width: 768px) {
+  .selectDiv {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .assignSubForm {
+    width: 48%;
+  }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .pliagFreeText {
+    font-size: 3.5rem;
+    line-height: 68px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .weprovide,
+  .pliagFreeText,
+  .textandForm {
+
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
