@@ -218,34 +218,22 @@ const UkPage = () => {
 
 
     return (
-        <div>
+        <div className="min-h-screen">
             <div
-                className="py-8 md:py-6"
+                className="py-10 md:py-12 lg:py-14 px-4 sm:px-6 lg:px-16"
                 style={{
-                    backgroundImage: "url('/images/homePageOne.svg')", // Replace with your image path
-                    backgroundSize: "cover", // Makes the background image cover the whole div
-                    backgroundPosition: "center", // Center-aligns the background image
-                    backgroundRepeat: "no-repeat", // Prevents the background from repeating
+                    backgroundImage: "url('/images/homePageOne.svg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
                 }}
             >
-                <h1
-                    className="text-[#000] text-[3.5rem] px-16 weprovide lg:w-[85%] mb-2"
-                    style={{
-                        fontWeight: 600,
-                        lineHeight: "50px",
-                    }}
-                >
+                <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-3 max-w-4xl">
                     Trusted Online Assignment Help in the UK
                 </h1>
-                <h1
-                    style={{
-                        fontWeight: 600,
-                        lineHeight: "60px",
-                    }}
-                    className="px-16 text-[3.5rem] pliagFreeText"
-                >
+                <h2 className="text-gray-800 text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] font-semibold leading-snug max-w-4xl">
                     Professional Assignment Writing Services in the UK by Qualified Subject Specialists
-                </h1>
+                </h2>
 
                 <div
                     className="flex justify-between flex-wrap gap-2  mt-2 px-16 textandForm"
@@ -716,118 +704,33 @@ const UkPage = () => {
                     // marginBottom: "3rem",
                 }}
             >
-                <h2
-                    className="text-center secTwoHeading mb-8 px-16
-        "
-                // style={{
-                //     fontSize:'48px',
-                //     fontWeight:600,
-                //     lineHeight:'57px',
-                //     paddingTop:'4rem'
-                // }}
-                >
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900 px-4">
                     How Our UK Online Assignment Help Process Works
                 </h2>
-                <div className="flex justify-center gap-2 align-center flex-wrap px-6">
-                    <div
-                        className="rounded-xl flex p-4 flex-col items-center largerScreen"
-                        style={{
-                            outline: "1px solid #DCDCDC",
-                            padding: "46px 24px",
-                            backgroundColor: "#fff",
-                        }}
-                    >
-                        <img
-                            src={Div1}
-                            className="w-[120px] h-[120px] rounded-full mb-2"
-                            alt="process"
-                        />
-
-                        <h2 className="font-bold mb-2">Step 1: Share Your Assignment Details</h2>
-                        <p className="text-center">
-                            Submit your requirements through the inquiry form. Our academic consultants assess your needs promptly.
-                        </p>
-                    </div>
-
-                    <div
-                        className="rounded-xl flex p-4  flex-col items-center largerScreen"
-                        style={{
-                            outline: "1px solid #DCDCDC",
-                            padding: "46px 24px",
-                            backgroundColor: "#fff",
-                        }}
-                    >
-                        <img
-                            src={Div2}
-                            className="w-[120px] h-[120px] rounded-full mb-2"
-                            alt="process"
-                        />
-
-                        <h2 className="font-bold mb-2">Step 2: Consult With a Subject-Specific Expert</h2>
-                        <p className="text-center">
-                            A qualified expert reviews your task, learning outcomes, referencing style, and deadline to ensure academic accuracy.
-                        </p>
-                    </div>
-
-                    <div
-                        className="rounded-xl flex p-4  flex-col items-center largerScreen"
-                        style={{
-                            outline: "1px solid #DCDCDC",
-                            padding: "46px 24px",
-                            backgroundColor: "#fff",
-                        }}
-                    >
-                        <img
-                            src={Div3}
-                            className="w-[120px] h-[120px] rounded-full mb-2"
-                            alt="process"
-                        />
-
-                        <h2 className="font-bold mb-2">Step 3: Secure & Flexible Payment</h2>
-                        <p className="text-center">
-                            Proceed with encrypted payment options that are convenient for both UK and international students.
-                        </p>
-                    </div>
-
-                    <div
-                        className="rounded-xl flex p-4  flex-col items-center largerScreen"
-                        style={{
-                            outline: "1px solid #DCDCDC",
-                            padding: "46px 24px",
-                            backgroundColor: "#fff",
-                        }}
-                    >
-                        <img
-                            src={Div4}
-                            className="w-[120px] h-[120px] rounded-full mb-2"
-                            alt="process"
-                        />
-
-                        <h2 className="font-bold mb-2">Step 4: Receive Your Completed Assignment</h2>
-                        <p className="text-center">
-                            Get a 100% original, AI-free assignment delivered before your UK university deadline.
-                        </p>
-                    </div>
+                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                    {[
+                        { img: Div1, step: "Step 1", title: "Share Your Assignment Details", desc: "Submit your requirements through the inquiry form. Our academic consultants assess your needs promptly." },
+                        { img: Div2, step: "Step 2", title: "Consult With a Subject-Specific Expert", desc: "A qualified expert reviews your task, learning outcomes, referencing style, and deadline to ensure academic accuracy." },
+                        { img: Div3, step: "Step 3", title: "Secure & Flexible Payment", desc: "Proceed with encrypted payment options that are convenient for both UK and international students." },
+                        { img: Div4, step: "Step 4", title: "Receive Your Completed Assignment", desc: "Get a 100% original, AI-free assignment delivered before your UK university deadline." },
+                    ].map((item, i) => (
+                        <div key={i} className="rounded-2xl p-6 bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                            <img src={item.img} className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mb-4 object-cover" alt="" />
+                            <span className="text-[#38419A] font-semibold text-sm mb-1">{item.step}</span>
+                            <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                        </div>
+                    ))}
                 </div>
-                <div className="my-16 text-center">
+                <div className="mt-12 text-center">
                     <button
-                        // type="submit"
-                        className="w-auto text-[#fff] px-2 rounded-md bg-[#38419A]"
-                        style={{
-                            width: "200px",
-                            padding: "8px",
-                        }}
-                        onClick={() => router.push('/contact-us')}
+                        type="button"
+                        onClick={() => router.push("/contact-us")}
+                        className="bg-[#38419A] text-white font-semibold px-8 py-3 rounded-xl hover:bg-[#2d3380] transition-colors"
                     >
                         Book Our Services
                     </button>
                 </div>
-                {/* <div className="text-center">
-            <button className="text-[#fff]">
-
-            Book Our Services
-            </button>
-        </div> */}
             </div>
 
             <section className="px-4 sm:px-6 lg:px-16 py-12 lg:py-16 bg-gradient-to-b from-white to-gray-50/50">
@@ -866,182 +769,153 @@ const UkPage = () => {
                 </div>
             </section>
 
-            {/* Subject-Focused Assignment Help Across the UK - from uk.md */}
-            <div className="max-w-6xl mx-auto px-6 py-12">
-                <h2 className="text-2xl font-bold text-center mb-6">Subject-Focused Assignment Help Across the UK</h2>
-                <p className="text-center text-gray-600 mb-8">We provide expert assignment help in line with UK curricula and university standards for:</p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 list-disc list-inside max-w-2xl mx-auto">
-                    <li>Business & Management Studies</li>
-                    <li>Law & Legal Studies (OSCOLA compliant)</li>
-                    <li>Nursing & Healthcare</li>
-                    <li>Engineering & Information Technology</li>
-                    <li>Finance, Accounting & Economics</li>
-                    <li>Marketing & Strategy</li>
-                    <li>Psychology & Sociology</li>
-                    <li>Education & Teaching</li>
-                    <li>Computer Science & Data Analytics</li>
-                </ul>
-            </div>
+            {/* Subject-Focused Assignment Help Across the UK */}
+            <section className="max-w-6xl mx-auto px-6 py-14">
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-gray-900">Subject-Focused Assignment Help Across the UK</h2>
+                <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">We provide expert assignment help in line with UK curricula and university standards for:</p>
+                <div className="flex flex-wrap justify-center gap-3">
+                    {["Business & Management Studies", "Law & Legal Studies (OSCOLA compliant)", "Nursing & Healthcare", "Engineering & Information Technology", "Finance, Accounting & Economics", "Marketing & Strategy", "Psychology & Sociology", "Education & Teaching", "Computer Science & Data Analytics"].map((subject, i) => (
+                        <span key={i} className="px-4 py-2.5 rounded-full bg-[#38419A]/5 text-gray-800 text-sm font-medium border border-[#38419A]/10 hover:bg-[#38419A]/10 transition-colors">
+                            {subject}
+                        </span>
+                    ))}
+                </div>
+            </section>
 
-            {/* Academic Services We Provide - from uk.md */}
-            <div className="bg-gray-50 py-12 px-6">
+            {/* Academic Services We Provide */}
+            <section className="bg-gray-50/80 py-14 px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl font-bold text-center mb-6">Academic Services We Provide</h2>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700 list-disc list-inside">
-                        <li>Assignment & Coursework Writing</li>
-                        <li>Dissertation & Thesis Assistance</li>
-                        <li>Essays, Reports & Case Studies</li>
-                        <li>Research Proposals & Literature Reviews</li>
-                        <li>Presentations (PPT)</li>
-                        <li>Annotated Bibliographies</li>
-                        <li>Project Management Writing</li>
-                        <li>Statement of Purpose (SOP)</li>
-                        <li>CV & Cover Letter Writing (UK Format)</li>
-                    </ul>
-                    <p className="text-center text-gray-600 mt-4">All services comply with UK academic guidelines, ethics policies, and preferred citation styles.</p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-gray-900">Academic Services We Provide</h2>
+                    <p className="text-center text-gray-600 mb-10">All services comply with UK academic guidelines, ethics policies, and preferred citation styles.</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {["Assignment & Coursework Writing", "Dissertation & Thesis Assistance", "Essays, Reports & Case Studies", "Research Proposals & Literature Reviews", "Presentations (PPT)", "Annotated Bibliographies", "Project Management Writing", "Statement of Purpose (SOP)", "CV & Cover Letter Writing (UK Format)"].map((service, i) => (
+                            <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
+                                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#38419A] text-white flex items-center justify-center text-sm font-bold">{i + 1}</span>
+                                <span className="text-gray-800 font-medium">{service}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Academic Assignment Support for All Levels - from uk.md */}
-            <div className="max-w-6xl mx-auto px-6 py-12">
-                <h2 className="text-2xl font-bold text-center mb-6">Academic Assignment Support for All Levels of Study in the UK</h2>
-                <p className="text-center text-gray-600 mb-8">We support students of all levels of higher education in the UK (undergraduate coursework to doctoral research).</p>
-                <div className="space-y-4 text-gray-700">
-                    <p><strong>(a) Undergraduate Assignment Help in the UK:</strong> We assist undergraduate students in the systematic process of writing academic papers that match learning outcomes, assessment briefs, and UK marking rubrics.</p>
-                    <p><strong>(b) Postgraduate & Master&apos;s Level Assignment Assistance:</strong> Our postgraduate services focus on critical analysis, advanced research, and academic writing, with adherence to master-level standards.</p>
-                    <p><strong>(c) Doctoral & Research-Level Academic Guidance:</strong> PhD and research students get scholarly assistance on research proposals, dissertations, literature reviews, methodology chapters, and data analysis, ensuring originality and academic depth.</p>
-                    <p className="text-center text-gray-600 mt-4">Every work follows UK university guidelines, institutional ethics, and preferred referencing styles like Harvard, APA, Oxford, MLA and Chicago.</p>
+            {/* Academic Assignment Support for All Levels */}
+            <section className="max-w-6xl mx-auto px-6 py-14">
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-gray-900">Academic Assignment Support for All Levels of Study in the UK</h2>
+                <p className="text-center text-gray-600 mb-10">We support students of all levels of higher education in the UK (undergraduate coursework to doctoral research).</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[
+                        { label: "Undergraduate", title: "Undergraduate Assignment Help in the UK", desc: "We assist undergraduate students in the systematic process of writing academic papers that match learning outcomes, assessment briefs, and UK marking rubrics." },
+                        { label: "Postgraduate", title: "Postgraduate & Master's Level", desc: "Our postgraduate services focus on critical analysis, advanced research, and academic writing, with adherence to master-level standards." },
+                        { label: "Doctoral", title: "Doctoral & Research-Level Guidance", desc: "PhD and research students get scholarly assistance on research proposals, dissertations, literature reviews, methodology chapters, and data analysis." },
+                    ].map((level, i) => (
+                        <div key={i} className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <span className="inline-block px-3 py-1 rounded-full bg-[#38419A]/10 text-[#38419A] text-sm font-semibold mb-3">{level.label}</span>
+                            <h3 className="font-bold text-gray-900 mb-2">{level.title}</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">{level.desc}</p>
+                        </div>
+                    ))}
                 </div>
-            </div>
+                <p className="text-center text-gray-600 mt-8 text-sm">Every work follows UK university guidelines, institutional ethics, and preferred referencing styles like Harvard, APA, Oxford, MLA and Chicago.</p>
+            </section>
 
-            {/* What Makes Our Service Different / How We Help - from uk.md */}
-            <div className="bg-gray-50 py-12 px-6">
-                <div className="max-w-4xl mx-auto space-y-8">
-                    <section>
-                        <h2 className="text-xl font-bold mb-3">1. What Makes Our Service Different from Others</h2>
-                        <p className="text-gray-700">Our UK assignment help service is unique because it is built on UK university academic systems. We operate on UK academic guidelines, rubrics, and assessment briefs used in London, Oxford, Manchester, Birmingham, Leeds, and other leading cities. Every assignment is handled by a subject-expert writer with specialised qualifications, enabling accurate theoretical application and critical analysis. We provide low-cost, high-quality support with clear plagiarism checking, limitless revision, and compliance with Harvard, APA, MLA, and Oxford referencing.</p>
-                    </section>
-                    <section>
-                        <h2 className="text-xl font-bold mb-3">2. How We Help You Get Better Grades</h2>
-                        <p className="text-gray-700">Our writers study the assignment brief and marking scheme so every part targets learning outcomes. Arguments are logical, backed by peer-reviewed materials, and in proper academic language. We apply Harvard, APA, MLA or Oxford referencing accurately to avoid citation errors. Well-structured, well-referenced work helps you avoid penalties and achieve better lecturer feedback and grades.</p>
-                    </section>
-                    <section>
-                        <h2 className="text-xl font-bold mb-3">3. How We Help You Do Your Homework Effortlessly</h2>
-                        <p className="text-gray-700">We analyse the assignment brief, learning outcomes and marking rubric first, then research using credible UK-relevant sources. Writing follows logical organisation, introduction, critical discussion, evidence-based arguments, and conclusion as required by UK universities. You can focus on the subject while we handle structure and formatting.</p>
-                    </section>
-                    <section>
-                        <h2 className="text-xl font-bold mb-3">4. Students from Top UK Universities Take Help from Us</h2>
-                        <p className="text-gray-700">Students at top institutions such as University of Oxford, University of Cambridge, UCL, University of Manchester and King&apos;s College London use our service. We tailor work to each university&apos;s marking rubric and module learning outcomes, ensuring plagiarism-free, institutionally-congruent work.</p>
-                    </section>
-                    <section>
-                        <h2 className="text-xl font-bold mb-3">5. How We Help You Meet Tough Deadlines</h2>
-                        <p className="text-gray-700">We focus on time management from the moment you submit your brief. Subject-specific experts balance detailed research and effective writing. For urgent tasks we follow a systematic procedure so you receive work on time—often ahead of deadline—giving you time to proofread or request revisions.</p>
-                    </section>
-                    <section>
-                        <h2 className="text-xl font-bold mb-3">6. Why Online Assignment Help Is Convenient for UK Students</h2>
-                        <p className="text-gray-700">Students in London, Manchester, Birmingham, Leeds or studying remotely get 24/7 access to expert support. Our online service ensures work complies with UK academic standards and referencing. Quick turnaround, qualified writers and clear revision policies help you meet deadlines and perform well without unnecessary stress.</p>
-                    </section>
-                </div>
-            </div>
-
-            {/* Affordable Assignment Help - from uk.md */}
-            <div className="max-w-6xl mx-auto px-6 py-12">
-                <h2 className="text-2xl font-bold text-center mb-2">Affordable Assignment Help in the UK</h2>
-                <p className="text-center text-gray-600 mb-6">Trusted by 10,000+ Students Worldwide — High-quality academic assistance without financial pressure.</p>
-                <p className="text-center font-medium mb-4">Subjects We Cover:</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700 list-disc list-inside max-w-2xl mx-auto">
-                    <li>Law Assignment Writing</li>
-                    <li>Science Assignment Writing</li>
-                    <li>Nursing Assignment Writing</li>
-                    <li>Engineering & Technical Assignments</li>
-                    <li>Construction Assignment Writing</li>
-                    <li>Management & Human Resource Assignments</li>
-                    <li>Finance & Statistics Assignments</li>
-                    <li>Psychology Assignments</li>
-                    <li>Calculus Assignments</li>
-                </ul>
-            </div>
-
-            {/* Student Reviews - from uk.md */}
-            <div className="bg-gray-50 py-12 px-6">
+            {/* What Makes Our Service Different / How We Help */}
+            <section className="bg-gray-50/80 py-14 px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-2xl font-bold text-center mb-8">Student Reviews: UK Assignment Help Experience</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900">Why Choose Our UK Assignment Help</h2>
+                    <div className="space-y-6">
+                        {[
+                            { title: "What Makes Our Service Different from Others", desc: "Our UK assignment help service is unique because it is built on UK university academic systems. We operate on UK academic guidelines, rubrics, and assessment briefs used in London, Oxford, Manchester, Birmingham, Leeds, and other leading cities. Every assignment is handled by a subject-expert writer with specialised qualifications, enabling accurate theoretical application and critical analysis. We provide low-cost, high-quality support with clear plagiarism checking, limitless revision, and compliance with Harvard, APA, MLA, and Oxford referencing." },
+                            { title: "How We Help You Get Better Grades", desc: "Our writers study the assignment brief and marking scheme so every part targets learning outcomes. Arguments are logical, backed by peer-reviewed materials, and in proper academic language. We apply Harvard, APA, MLA or Oxford referencing accurately to avoid citation errors. Well-structured, well-referenced work helps you avoid penalties and achieve better lecturer feedback and grades." },
+                            { title: "How We Help You Do Your Homework Effortlessly", desc: "We analyse the assignment brief, learning outcomes and marking rubric first, then research using credible UK-relevant sources. Writing follows logical organisation, introduction, critical discussion, evidence-based arguments, and conclusion as required by UK universities. You can focus on the subject while we handle structure and formatting." },
+                            { title: "Students from Top UK Universities Take Help from Us", desc: "Students at top institutions such as University of Oxford, University of Cambridge, UCL, University of Manchester and King's College London use our service. We tailor work to each university's marking rubric and module learning outcomes, ensuring plagiarism-free, institutionally-congruent work." },
+                            { title: "How We Help You Meet Tough Deadlines", desc: "We focus on time management from the moment you submit your brief. Subject-specific experts balance detailed research and effective writing. For urgent tasks we follow a systematic procedure so you receive work on time—often ahead of deadline—giving you time to proofread or request revisions." },
+                            { title: "Why Online Assignment Help Is Convenient for UK Students", desc: "Students in London, Manchester, Birmingham, Leeds or studying remotely get 24/7 access to expert support. Our online service ensures work complies with UK academic standards and referencing. Quick turnaround, qualified writers and clear revision policies help you meet deadlines and perform well without unnecessary stress." },
+                        ].map((item, i) => (
+                            <div key={i} className="flex gap-4 p-5 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#38419A] text-white flex items-center justify-center font-bold text-sm">{i + 1}</span>
+                                <div>
+                                    <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Affordable Assignment Help */}
+            <section className="max-w-6xl mx-auto px-6 py-14">
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-2 text-gray-900">Affordable Assignment Help in the UK</h2>
+                <p className="text-center text-gray-600 mb-8">Trusted by 10,000+ Students Worldwide — High-quality academic assistance without financial pressure.</p>
+                <p className="text-center font-medium text-gray-800 mb-4">Subjects We Cover:</p>
+                <div className="flex flex-wrap justify-center gap-3">
+                    {["Law Assignment Writing", "Science Assignment Writing", "Nursing Assignment Writing", "Engineering & Technical Assignments", "Construction Assignment Writing", "Management & Human Resource Assignments", "Finance & Statistics Assignments", "Psychology Assignments", "Calculus Assignments"].map((subject, i) => (
+                        <span key={i} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-800 text-sm font-medium hover:bg-[#38419A]/10 hover:text-[#38419A] transition-colors">
+                            {subject}
+                        </span>
+                    ))}
+                </div>
+            </section>
+
+            {/* Student Reviews */}
+            <section className="bg-gray-50/80 py-14 px-6">
+                <div className="max-w-5xl mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-gray-900">Student Reviews: UK Assignment Help Experience</h2>
+                    <p className="text-center text-gray-600 mb-10">What students say about our UK assignment help service</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <blockquote className="border-l-4 border-[#38419A] pl-4 py-2 text-gray-700">
-                            <p className="font-medium">Sophia R., Psychology Student</p>
-                            <p className="italic">&quot;Outstanding research quality and strong academic depth. The thesis was well-structured, critically analysed, and fully aligned with UK university assessment expectations.&quot;</p>
-                        </blockquote>
-                        <blockquote className="border-l-4 border-[#38419A] pl-4 py-2 text-gray-700">
-                            <p className="font-medium">Daniel K., Engineering Student</p>
-                            <p className="italic">&quot;The technical report was clear, concise, and professionally written. It was delivered before the deadline and met all UK academic and formatting requirements.&quot;</p>
-                        </blockquote>
-                        <blockquote className="border-l-4 border-[#38419A] pl-4 py-2 text-gray-700">
-                            <p className="font-medium">Olivia M., Business Student</p>
-                            <p className="italic">&quot;The case study demonstrated excellent strategic insight and practical analysis. My professor appreciated the structure, arguments, and strong academic relevance throughout.&quot;</p>
-                        </blockquote>
-                        <blockquote className="border-l-4 border-[#38419A] pl-4 py-2 text-gray-700">
-                            <p className="font-medium">Heeral P., Business Student</p>
-                            <p className="italic">&quot;The dissertation was highly structured, well-researched, and academically sound. The logical flow and referencing quality met UK postgraduate standards perfectly.&quot;</p>
-                        </blockquote>
-                        <blockquote className="border-l-4 border-[#38419A] pl-4 py-2 text-gray-700 md:col-span-2">
-                            <p className="font-medium">Liam H., Human Resources Student</p>
-                            <p className="italic">&quot;The essay presented strong arguments, credible sources, and accurate UK formatting. It reflected deep subject understanding and clear academic writing.&quot;</p>
-                        </blockquote>
+                        {[
+                            { name: "Sophia R.", role: "Psychology Student", quote: "Outstanding research quality and strong academic depth. The thesis was well-structured, critically analysed, and fully aligned with UK university assessment expectations." },
+                            { name: "Daniel K.", role: "Engineering Student", quote: "The technical report was clear, concise, and professionally written. It was delivered before the deadline and met all UK academic and formatting requirements." },
+                            { name: "Olivia M.", role: "Business Student", quote: "The case study demonstrated excellent strategic insight and practical analysis. My professor appreciated the structure, arguments, and strong academic relevance throughout." },
+                            { name: "Heeral P.", role: "Business Student", quote: "The dissertation was highly structured, well-researched, and academically sound. The logical flow and referencing quality met UK postgraduate standards perfectly." },
+                            { name: "Liam H.", role: "Human Resources Student", quote: "The essay presented strong arguments, credible sources, and accurate UK formatting. It reflected deep subject understanding and clear academic writing.", wide: true },
+                        ].map((r, i) => (
+                            <div key={i} className={`p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${r.wide ? "md:col-span-2" : ""}`}>
+                                <div className="flex items-center gap-1 text-amber-500 mb-3">{"★".repeat(5)}</div>
+                                <p className="text-gray-700 italic mb-4">&quot;{r.quote}&quot;</p>
+                                <p className="font-semibold text-gray-900">{r.name}</p>
+                                <p className="text-sm text-gray-500">{r.role}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* FAQ - from uk.md */}
-            <div className="max-w-4xl mx-auto px-6 py-12">
-                <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions: Assignment Help in the UK</h2>
-                <div className="space-y-6 text-gray-700">
-                    <div>
-                        <h3 className="font-bold mb-1">1. Is your assignment help service suitable for UK university standards?</h3>
-                        <p>Yes. Our assignment help services adhere to UK university guidelines, assessment criteria, and marking rubrics. We apply recognised referencing such as Harvard, APA and OSCOLA for full academic adherence and quality.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">2. Can international students studying in the UK use your services?</h3>
-                        <p>Absolutely. We assist both UK-based and international students with low-cost assistance, writing according to UK-based requirements, learning outcomes, and institutional requirements so all students receive equal academic support.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">3. What subjects do you cover for assignment help in the UK?</h3>
-                        <p>We specialise in business and management, law, nursing, engineering, IT, finance, psychology, education, computer science and most other academic courses offered by UK universities.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">4. Do you provide plagiarism-free assignment writing in the UK?</h3>
-                        <p>Yes. Every assignment is composed by qualified academic professionals. All papers are verified as original and free of plagiarism with appropriate citations and references in line with UK academic integrity policies.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">5. How quickly can I receive my assignment?</h3>
-                        <p>We offer flexible delivery according to your deadline, including urgent and short-notice delivery, while ensuring well-researched, academically accurate work that meets UK quality standards.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">6. Are revisions included in your assignment services?</h3>
-                        <p>Yes. We offer free revisions so you get the end product to your satisfaction, lecturer feedback, and university marking standards without affecting the quality or originality of the work.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">7. Is my personal and academic information kept confidential?</h3>
-                        <p>Absolutely. Your data is stored in secure systems with strict privacy measures to ensure confidentiality and safety throughout the assignment help process.</p>
-                    </div>
-                    <div>
-                        <h3 className="font-bold mb-1">8. How do I place an order for assignment help in the UK?</h3>
-                        <p>Enter your assignment details in our online enquiry form. Our academic support team will then connect you with a qualified subject expert to start the process as soon as possible.</p>
-                    </div>
+            {/* FAQ */}
+            <section className="max-w-4xl mx-auto px-6 py-14">
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-gray-900">Frequently Asked Questions: Assignment Help in the UK</h2>
+                <p className="text-center text-gray-600 mb-10">Quick answers to common questions</p>
+                <div className="space-y-4">
+                    {[
+                        { q: "Is your assignment help service suitable for UK university standards?", a: "Yes. Our assignment help services adhere to UK university guidelines, assessment criteria, and marking rubrics. We apply recognised referencing such as Harvard, APA and OSCOLA for full academic adherence and quality." },
+                        { q: "Can international students studying in the UK use your services?", a: "Absolutely. We assist both UK-based and international students with low-cost assistance, writing according to UK-based requirements, learning outcomes, and institutional requirements so all students receive equal academic support." },
+                        { q: "What subjects do you cover for assignment help in the UK?", a: "We specialise in business and management, law, nursing, engineering, IT, finance, psychology, education, computer science and most other academic courses offered by UK universities." },
+                        { q: "Do you provide plagiarism-free assignment writing in the UK?", a: "Yes. Every assignment is composed by qualified academic professionals. All papers are verified as original and free of plagiarism with appropriate citations and references in line with UK academic integrity policies." },
+                        { q: "How quickly can I receive my assignment?", a: "We offer flexible delivery according to your deadline, including urgent and short-notice delivery, while ensuring well-researched, academically accurate work that meets UK quality standards." },
+                        { q: "Are revisions included in your assignment services?", a: "Yes. We offer free revisions so you get the end product to your satisfaction, lecturer feedback, and university marking standards without affecting the quality or originality of the work." },
+                        { q: "Is my personal and academic information kept confidential?", a: "Absolutely. Your data is stored in secure systems with strict privacy measures to ensure confidentiality and safety throughout the assignment help process." },
+                        { q: "How do I place an order for assignment help in the UK?", a: "Enter your assignment details in our online enquiry form. Our academic support team will then connect you with a qualified subject expert to start the process as soon as possible." },
+                    ].map((faq, i) => (
+                        <div key={i} className="p-5 rounded-xl bg-gray-50 border border-gray-100">
+                            <h3 className="font-bold text-gray-900 mb-2">{i + 1}. {faq.q}</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                        </div>
+                    ))}
                 </div>
-            </div>
+            </section>
 
-            {/* Final CTA - from uk.md */}
-            <div className="bg-[#38419A] text-white py-12 px-6 text-center">
-                <h2 className="text-2xl font-bold mb-4">Get Professional Assignment Assistance Online in UK Today</h2>
-                <p className="max-w-2xl mx-auto mb-6">Don&apos;t let academic pressure affect your grades or mental well-being. Choose The Assignment Hub for trusted assignment help in the United Kingdom.</p>
+            {/* Final CTA */}
+            <section className="bg-[#38419A] text-white py-16 px-6 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Get Professional Assignment Assistance Online in UK Today</h2>
+                <p className="max-w-2xl mx-auto mb-8 text-white/90 text-lg">Don&apos;t let academic pressure affect your grades or mental well-being. Choose The Assignment Hub for trusted assignment help in the United Kingdom.</p>
                 <button
                     type="button"
                     onClick={() => router.push("/contact-us")}
-                    className="bg-white text-[#38419A] font-semibold px-8 py-3 rounded-md hover:opacity-90 transition-opacity"
+                    className="bg-white text-[#38419A] font-semibold px-10 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
                 >
                     Get Started
                 </button>
-            </div>
+            </section>
 
             <div className="relative bg-blue-100"
                 style={{
