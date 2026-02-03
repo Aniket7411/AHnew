@@ -278,9 +278,9 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex justify-between font-inter py-2 px-16 items-center headerMain relative">
+      <div className="flex justify-between font-inter py-3 px-4 sm:px-8 lg:px-16 items-center headerMain relative min-h-[72px] gap-4">
         {/* Logo */}
-        <Link href={getRoutePath()} className="links hidden md:block">
+        <Link href={getRoutePath()} className="links hidden md:block flex-shrink-0">
           <img
             src="/images/TahLogo.svg"
             alt="logo"
@@ -296,9 +296,8 @@ const Header = () => {
           tabIndex={0}
           onKeyDown={(e) => e.key === "Enter" && router.push("/")}
         />
-        <div className="hidden lg:block one">
-          {/* <ul className="flex space-x-6 font-bold text-[#000000] headUl"> */}
-          <ul className="flex gap-6 font-bold text-[#000000] headUl">
+        <div className="hidden lg:flex flex-1 min-w-0 one justify-center">
+          <ul className="flex gap-4 xl:gap-6 font-bold text-[#000000] headUl flex-shrink-0 max-w-full">
 
 
 
@@ -413,11 +412,11 @@ const Header = () => {
 
           </ul>
         </div>
-        <div className="hidden lg:block absolute right-16 headUl">
+        <div className="hidden lg:block flex-shrink-0 headUl">
           <div className="flex space-x-4">
             <Link
               href="/contact-us"
-              className="text-white rounded-md bg-[#38419A]"
+              className="text-white rounded-md bg-[#38419A] whitespace-nowrap"
               style={{
                 padding: "8px 16px",
                 borderRadius: "10px",

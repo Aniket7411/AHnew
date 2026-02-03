@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Layout({ children }) {
   return (
     <div>
-      <div className="fixed w-full bg-white z-50">
+      <div className="fixed w-full bg-white z-50 shadow-sm border-b border-gray-100">
         <Header />
       </div>
       <div className="pt-12 lg:pt-28">{children}</div>

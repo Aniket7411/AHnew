@@ -51,9 +51,8 @@ select {
       display: block !important;
     }
     .one{
-      margin: 0 auto !important;
+      /* flex-1 min-w-0 applied in JSX for proper nav vs Contact Us spacing */
     }
-
   }
 
   

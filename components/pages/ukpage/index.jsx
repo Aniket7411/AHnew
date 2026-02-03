@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import PhoneCode from "../../utils/phoneCode";
 import emailjs from "@emailjs/browser";
 import Slider from "react-slick";
+import "../../reactcomponents/section1/section.css";
 
 // Images from public/images (Next.js serves public at root)
 const whats = "/images/whats.svg";
@@ -219,8 +220,9 @@ const UkPage = () => {
 
     return (
         <div className="min-h-screen">
+            {/* Banner */}
             <div
-                className="py-10 md:py-12 lg:py-14 px-4 sm:px-6 lg:px-16"
+                className="pt-6 pb-12 md:pt-8 md:pb-14 lg:pt-10 lg:pb-16 px-4 sm:px-6 lg:px-10 xl:px-16"
                 style={{
                     backgroundImage: "url('/images/homePageOne.svg')",
                     backgroundSize: "cover",
@@ -228,25 +230,19 @@ const UkPage = () => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-3 max-w-4xl">
-                    Trusted Online Assignment Help in the UK
-                </h1>
-                <h2 className="text-gray-800 text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] font-semibold leading-snug max-w-4xl">
-                    Professional Assignment Writing Services in the UK by Qualified Subject Specialists
-                </h2>
+                <div className="max-w-7xl mx-auto">
+                    <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-2 max-w-4xl">
+                        Trusted Online Assignment Help in the UK
+                    </h1>
+                    <h2 className="text-gray-800 text-lg sm:text-xl md:text-2xl lg:text-[1.75rem] font-semibold leading-snug max-w-4xl text-gray-700">
+                        Professional Assignment Writing Services in the UK by Qualified Subject Specialists
+                    </h2>
 
-                <div
-                    className="flex justify-between flex-wrap gap-2  mt-2 px-16 textandForm"
-                    style={{
-                        paddingBottom: "3rem",
-                    }}
-                >
                     <div
-                        style={{
-                            height: "maxContent",
-                        }}
-                        className="mb-4 lg:w-[47%]"
+                        className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10 xl:gap-12 mt-8 lg:mt-10 textandForm"
+                        style={{ paddingBottom: "2rem" }}
                     >
+                    <div className="mb-4 lg:flex-1 lg:max-w-[48%]">
                         {/* <button
               type="button"
               className="flex items-center bg-black text-white rounded-full ps-2 pe-1 hover:bg-gray-800 transition-colors duration-300 relative mb-3"
@@ -274,7 +270,7 @@ const UkPage = () => {
 
                         <div className="flex mt-4 gap-2 items-center">
                             <img src="/images/image 2.svg" className="-ms-2" alt="" />
-                            <div class="w-px h-24 bg-[#8799DB] mx-1"></div>
+                            <div className="w-px h-24 bg-[#8799DB] mx-1" />
                             <div className="cursor-pointer rounded-3xl p-1 flex flex-col justify-center gap-1 px-2"
                                 onClick={() => window.open("https://www.sitejabber.com/reviews/theassignmenthub.com", "_blank")}
                             >
@@ -296,7 +292,7 @@ const UkPage = () => {
                                     </span>
                                 </div>
                             </div>
-                            <div class="w-px h-24 bg-[#8799DB] mx-1"></div>
+                            <div className="w-px h-24 bg-[#8799DB] mx-1" />
 
                             <div className="rounded-3xl cursor-pointer p-1 flex flex-col justify-center gap-1 px-2"
                                 onClick={() => window.open("https://www.trustpilot.com/search?query=The+Assignment+Hub", "_blank")}
@@ -401,23 +397,12 @@ const UkPage = () => {
 
                     </div>
                     <div
-                        className="mb-4 shadow w-[100%] lg:w-[50%]  rounded-2xl formsStyle"
-                        style={
-                            {
-                                backgroundColor: "#fff",
-                                opacity: "0.97",
-                            }
-                        }
+                        className="mb-4 w-full lg:flex-1 lg:max-w-[48%] rounded-2xl formsStyle bg-white border border-gray-200 shadow-lg"
                     >
                         <form onSubmit={handleSubmit}>
-                            <div
-                                style={{
-
-                                }}
-                                className="p-4 rounded-2xl"
-                            >
-                                <p className="text-center text-black mb-2 text-lg font-medium">
-                                    Request Assignment Help in the UK: Get Started Instantly — Submit Your Academic Requirements & Connect with an Expert. Complete the form below to receive tailored assignment support for UK universities.
+                            <div className="p-5 sm:p-6 rounded-2xl">
+                                <p className="text-center text-gray-700 mb-4 text-sm sm:text-base font-medium">
+                                    Submit your requirements below and connect with a UK expert for tailored assignment support.
                                 </p>
 
                                 {/* Selectable Options */}
@@ -673,23 +658,16 @@ const UkPage = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-wrap justify-around w-[80%] mx-auto mb-8 gap-8 ">
-                    <img src="/images/iso.svg" alt="" />
+                <div className="flex flex-wrap justify-around w-full max-w-4xl mx-auto mt-10 mb-6 gap-6 sm:gap-8">
+                    <img src="/images/iso.svg" alt="" className="h-12 w-auto object-contain" />
                     <div>
-                        <img src="/images/tenP.svg" alt="" />
-                        <p className="text-center" style={{
-                            fontSize: '32px',
-                            fontWeight: '500',
-                            color: '#38419A'
-                        }}>Years of Experience</p>
+                        <img src="/images/tenP.svg" alt="" className="mx-auto" />
+                        <p className="text-center text-[#38419A] font-medium" style={{ fontSize: '1.25rem' }}>Years of Experience</p>
                     </div>
-
-                    <img src="/images/privacy.svg" alt="" />
-
-
-
+                    <img src="/images/privacy.svg" alt="" className="h-12 w-auto object-contain" />
                 </div>
 
+                </div>
             </div>
 
             <div
