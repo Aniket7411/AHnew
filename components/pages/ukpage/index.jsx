@@ -231,35 +231,20 @@ const UkPage = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-2 max-w-4xl">
+                    <section className=" md:mb-[60px]">
+                    <h1 className="text-gray-900 mt-[40px] md:mt-0 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-2 max-w-4xl">
                         Trusted Online Assignment Help in the UK
                     </h1>
-                    <h2 className="text-gray-800 text-lg sm:text-xl md:text-2xl lg:text-[1.75rem] font-semibold leading-snug max-w-4xl text-gray-700">
+                    <h2 className="text-gray-800 text-lg sm:text-xl md:text-3xl lg:text-[1.5rem] font-semibold leading-snug max-w-4xl text-gray-700">
                         Professional Assignment Writing Services in the UK by Qualified Subject Specialists
                     </h2>
-
+                    </section>
                     <div
                         className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-10 xl:gap-12 mt-8 lg:mt-10 textandForm"
                         style={{ paddingBottom: "2rem" }}
                     >
                     <div className="mb-4 lg:flex-1 lg:max-w-[48%]">
-                        {/* <button
-              type="button"
-              className="flex items-center bg-black text-white rounded-full ps-2 pe-1 hover:bg-gray-800 transition-colors duration-300 relative mb-3"
-            >
-              <span className="text-[16px] ms-2">View Plan</span> 
-              <img
-                src="/images/viewPlan.svg"
-                style={{
-                  height: "3rem",
-                }}
-                alt=""
-              />
-            </button> */}
-                        {/* <p className="mb-3 text-[20px] text-[#5C5C5C]">
-              <span className="font-bold text-[#000]">10+</span> Years of
-              Unmatched Expertise and Commitment
-            </p> */}
+                     
                         <p className="text-[20px] text-[#5C5C5C] mb-3">
                             AI-Free Academic Assignment Help in the UK by 7000+ Qualified Experts. We offer an online service of assignment help with professionalism in the UK, done by actual academic experts. All assignments are manually written, carefully researched and in accordance with the UK university marking criteria.
                         </p>
